@@ -22,7 +22,7 @@ train_dataset=torchvision.datasets.MNIST(root=".",train=True,download=True,trans
 if __name__=='__main__':
     # 训练样本的tensor
     img_tensor,label=train_dataset[0]
-
+    print(img_tensor.shape,label)
     # 转回pil图像绘制
     plt.figure(figsize=(5,5))
     pil_img=tensor_to_pil(img_tensor)
