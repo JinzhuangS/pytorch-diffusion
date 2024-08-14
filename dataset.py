@@ -18,7 +18,7 @@ tensor_to_pil=transforms.Compose([
 
 # 数据集Pytorch Dataset
 train_dataset=torchvision.datasets.MNIST(root=".",train=True,download=True,transform=pil_to_tensor) # 手写数字图像pillow(PIL),对应的数字
-
+# print(train_dataset[0])
 if __name__=='__main__':
     # 训练样本的tensor
     img_tensor,label=train_dataset[0]
